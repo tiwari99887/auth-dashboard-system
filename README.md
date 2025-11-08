@@ -1,68 +1,56 @@
 # User Authentication & Dashboard System
 
-A complete backend authentication system built with Node.js, Express, MongoDB, and JWT.
+Backend REST API using Node.js, Express, MongoDB, Mongoose, JWT.
 
 ## Features
-
-- User registration and login with JWT authentication
-- Role-based access control (User/Admin)
+- User registration and login (JWT-based)
 - Password hashing with bcrypt
-- User dashboard with profile management
-- Admin dashboard with user management
-- Input validation and error handling
-- Secure API endpoints
+- Protected/user/admin routes
+- User profile & dashboard
+- Admin dashboard & user management
+- Input validation & error handling
 
 ## Tech Stack
+- Node.js, Express.js, MongoDB, Mongoose
+- JWT, bcryptjs
+- express-validator, dotenv
 
-- **Node.js** - JavaScript runtime
-- **Express.js** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM
-- **JWT** - Authentication
-- **bcryptjs** - Password hashing
-- **express-validator** - Input validation
+## Setup
 
-## Installation
+1. **Clone the repo**
 
-### Prerequisites
+git clone https://github.com/tiwari99887/auth-dashboard-system.git
+cd auth-dashboard-system
 
-- Node.js (v14 or higher)
-- MongoDB (local or Atlas)
+2. **Install dependencies**
 
-### Setup
+npm install
 
-1. Clone the repository:
-# User Authentication & Dashboard System
 
-A complete backend authentication system built with Node.js, Express, MongoDB, and JWT.
+3. **Configure environment**
+- Copy `.env.example` to `.env`
+- Fill in your MongoDB URI and JWT secret
 
-## Features
+4. **Start development server**
 
-- User registration and login with JWT authentication
-- Role-based access control (User/Admin)
-- Password hashing with bcrypt
-- User dashboard with profile management
-- Admin dashboard with user management
-- Input validation and error handling
-- Secure API endpoints
+npm run dev
 
-## Tech Stack
 
-- **Node.js** - JavaScript runtime
-- **Express.js** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM
-- **JWT** - Authentication
-- **bcryptjs** - Password hashing
-- **express-validator** - Input validation
+API runs on `http://localhost:5000`
 
-## Installation
+## Endpoints
+- `POST /api/auth/register` - Register user
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/me` - Get current user (protected)
+- `GET /api/user/dashboard` - User dashboard (protected)
+- `GET /api/user/profile` - Get user profile (protected)
+- `PUT /api/user/profile` - Update profile (protected)
+- `GET /api/admin/dashboard` - Admin dashboard (admin only)
+- `GET /api/admin/users` - Get all users (admin only)
+- `DELETE /api/admin/users/:id` - Delete user (admin only)
+- Plus: Email verification, password reset (bonus features)
 
-### Prerequisites
+## Author
+Shivam Tiwari  
+[GitHub Repo](https://github.com/tiwari99887/auth-dashboard-system)
 
-- Node.js (v14 or higher)
-- MongoDB (local or Atlas)
-
-### Setup
-
-1. Clone the repository:
